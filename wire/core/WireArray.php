@@ -133,7 +133,7 @@ class WireArray extends Wire implements \IteratorAggregate, \ArrayAccess, \Count
 	}
 
 	/**
-	 * Is the given item valid for storange in this array?
+	 * Is the given item valid for storage in this array?
 	 * 
 	 * Template method that descending classes may use to validate items added to this WireArray
 	 * 
@@ -872,7 +872,7 @@ class WireArray extends Wire implements \IteratorAggregate, \ArrayAccess, \Count
 	 * $randomItem = $items->getRandom();
 	 * 
 	 * // Get 3 random items
-	 * $randomItems = $items->getRandom(3); 
+	 * $randomItems = $items->getRandom(3);
 	 * ~~~~~
 	 * 
 	 * #pw-group-retrieval
@@ -933,7 +933,7 @@ class WireArray extends Wire implements \IteratorAggregate, \ArrayAccess, \Count
 	 * $randomItems = $items->findRandomTimed(3); 
 	 * 
 	 * // Get same 3 random items per hour
-	 * $randomItems = $items->findRandomTimed('YmdH'); 
+	 * $randomItems = $items->findRandomTimed(3, 'YmdH'); 
 	 * ~~~~~
 	 * 
 	 * #pw-group-retrieval
@@ -941,7 +941,7 @@ class WireArray extends Wire implements \IteratorAggregate, \ArrayAccess, \Count
 	 * @param int $num The amount of items to extract from the given list
 	 * @param int|string $seed Optionally provide one of the following: 
 	 *   - A PHP [date()](http://php.net/manual/en/function.date.php) format string.
-	 *   - A number used to see the random number generator.
+	 *   - A number used to seed the random number generator.
 	 *   - The default is the PHP date format "Ymd" which makes it randomize once daily. 
 	 * @return WireArray
 	 * @see WireArray::findRandom()
